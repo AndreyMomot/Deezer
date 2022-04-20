@@ -8,14 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		471EF695281091B100A21056 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471EF694281091B100A21056 /* AppDelegate.swift */; };
-		471EF697281091B100A21056 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471EF696281091B100A21056 /* SceneDelegate.swift */; };
-		471EF699281091B100A21056 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471EF698281091B100A21056 /* ViewController.swift */; };
-		471EF69C281091B100A21056 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 471EF69A281091B100A21056 /* Main.storyboard */; };
 		471EF69E281091B400A21056 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 471EF69D281091B400A21056 /* Assets.xcassets */; };
 		471EF6A1281091B400A21056 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 471EF69F281091B400A21056 /* LaunchScreen.storyboard */; };
 		471EF6AC281091B400A21056 /* DeezerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471EF6AB281091B400A21056 /* DeezerTests.swift */; };
 		471EF6B6281091B400A21056 /* DeezerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471EF6B5281091B400A21056 /* DeezerUITests.swift */; };
 		471EF6B8281091B400A21056 /* DeezerUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471EF6B7281091B400A21056 /* DeezerUITestsLaunchTests.swift */; };
+		471EF6C7281094C300A21056 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471EF6C6281094C200A21056 /* HomeViewController.swift */; };
+		471EF6C92810950100A21056 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 471EF6C82810950100A21056 /* HomeViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,9 +37,6 @@
 /* Begin PBXFileReference section */
 		471EF691281091B100A21056 /* Deezer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Deezer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		471EF694281091B100A21056 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		471EF696281091B100A21056 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		471EF698281091B100A21056 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		471EF69B281091B100A21056 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		471EF69D281091B400A21056 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		471EF6A0281091B400A21056 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		471EF6A2281091B400A21056 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +45,8 @@
 		471EF6B1281091B400A21056 /* DeezerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DeezerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		471EF6B5281091B400A21056 /* DeezerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeezerUITests.swift; sourceTree = "<group>"; };
 		471EF6B7281091B400A21056 /* DeezerUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeezerUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		471EF6C6281094C200A21056 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		471EF6C82810950100A21056 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,12 +98,8 @@
 			isa = PBXGroup;
 			children = (
 				471EF694281091B100A21056 /* AppDelegate.swift */,
-				471EF696281091B100A21056 /* SceneDelegate.swift */,
-				471EF698281091B100A21056 /* ViewController.swift */,
-				471EF69A281091B100A21056 /* Main.storyboard */,
-				471EF69D281091B400A21056 /* Assets.xcassets */,
-				471EF69F281091B400A21056 /* LaunchScreen.storyboard */,
-				471EF6A2281091B400A21056 /* Info.plist */,
+				471EF6C42810947000A21056 /* Modules */,
+				471EF6CA2810958400A21056 /* Resources */,
 			);
 			path = Deezer;
 			sourceTree = "<group>";
@@ -125,6 +119,33 @@
 				471EF6B7281091B400A21056 /* DeezerUITestsLaunchTests.swift */,
 			);
 			path = DeezerUITests;
+			sourceTree = "<group>";
+		};
+		471EF6C42810947000A21056 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				471EF6C52810947F00A21056 /* Home */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		471EF6C52810947F00A21056 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				471EF6C6281094C200A21056 /* HomeViewController.swift */,
+				471EF6C82810950100A21056 /* HomeViewController.xib */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		471EF6CA2810958400A21056 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				471EF69D281091B400A21056 /* Assets.xcassets */,
+				471EF69F281091B400A21056 /* LaunchScreen.storyboard */,
+				471EF6A2281091B400A21056 /* Info.plist */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,7 +254,7 @@
 			files = (
 				471EF6A1281091B400A21056 /* LaunchScreen.storyboard in Resources */,
 				471EF69E281091B400A21056 /* Assets.xcassets in Resources */,
-				471EF69C281091B100A21056 /* Main.storyboard in Resources */,
+				471EF6C92810950100A21056 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +279,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				471EF699281091B100A21056 /* ViewController.swift in Sources */,
 				471EF695281091B100A21056 /* AppDelegate.swift in Sources */,
-				471EF697281091B100A21056 /* SceneDelegate.swift in Sources */,
+				471EF6C7281094C300A21056 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,14 +317,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		471EF69A281091B100A21056 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				471EF69B281091B100A21056 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		471EF69F281091B400A21056 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -444,9 +456,9 @@
 				INFOPLIST_FILE = Deezer/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -472,9 +484,9 @@
 				INFOPLIST_FILE = Deezer/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
