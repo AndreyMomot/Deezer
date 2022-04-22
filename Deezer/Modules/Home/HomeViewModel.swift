@@ -28,36 +28,35 @@ class HomeViewModel: HomeViewModelProtocol {
             switch result {
             case .success(let artists):
                 self?.artists.value = artists
-                self?.getAlbums(for: artists.first!.id)
             case .failure(let error):
                 self?.error.value = error
             }
         }
     }
     
-    func getAlbums(for artistID: Int) {
-        api.getAlbums(for: artistID) {[weak self] result in
-            switch result {
-            case .success(let albums):
-                print(albums)
-                self?.getAlbumInfo(for: albums.first!.id)
-            case .failure(let error):
-                self?.error.value = error
-            }
-        }
-    }
-    
-    func getAlbumInfo(for albumID: Int) {
-        api.getAlbumInfo(albumID) {[weak self] result in
-            switch result {
-            case .success(let album):
-                print(album)
-                
-            case .failure(let error):
-                self?.error.value = error
-            }
-        }
-    }
+//    func getAlbums(for artistID: Int) {
+//        api.getAlbums(for: artistID) {[weak self] result in
+//            switch result {
+//            case .success(let albums):
+//                print(albums)
+//                self?.getAlbumInfo(for: albums.first!.id)
+//            case .failure(let error):
+//                self?.error.value = error
+//            }
+//        }
+//    }
+//
+//    func getAlbumInfo(for albumID: Int) {
+//        api.getAlbumInfo(albumID) {[weak self] result in
+//            switch result {
+//            case .success(let album):
+//                print(album)
+//
+//            case .failure(let error):
+//                self?.error.value = error
+//            }
+//        }
+//    }
     
     
 }

@@ -24,7 +24,6 @@ class CustomImageView: UIImageView {
     }
     
     func loadImageWithUrl(urlString: String) {
-        activity.startAnimating()
         weak var oldTask = currentTask
         currentTask = nil
         oldTask?.cancel()
@@ -39,8 +38,10 @@ class CustomImageView: UIImageView {
         }
         
         if let url = URL(string: urlString) {
+            activity.startAnimating()
+
             let session = URLSession.shared
-            let dataTask = session.dataTask(with: url) { [weak self] (data, response, error) in
+            let dataTask = session.dataTask(with: url) {[weak self] (data, response, error) in
                 DispatchQueue.main.async {
                     self?.activity.stopAnimating()
                 }

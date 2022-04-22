@@ -28,8 +28,10 @@
 		471EF6E928119FDD00A21056 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471EF6E828119FDD00A21056 /* HomeViewModel.swift */; };
 		471EF6EC2811A3AF00A21056 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471EF6EB2811A3AF00A21056 /* Coordinator.swift */; };
 		471EF6EE2811A3CB00A21056 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471EF6ED2811A3CB00A21056 /* BaseCoordinator.swift */; };
-		471EF6F02811A52000A21056 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471EF6EF2811A52000A21056 /* UIViewController.swift */; };
+		471EF6F02811A52000A21056 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471EF6EF2811A52000A21056 /* BaseViewController.swift */; };
 		471EF6F22811B3D800A21056 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471EF6F12811B3D800A21056 /* AppCoordinator.swift */; };
+		4763ADAF2811FD83006D20C8 /* ArtistCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4763ADAE2811FD83006D20C8 /* ArtistCell.swift */; };
+		4763ADB12811FDAF006D20C8 /* ArtistCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4763ADB02811FDAF006D20C8 /* ArtistCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,8 +77,10 @@
 		471EF6E828119FDD00A21056 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		471EF6EB2811A3AF00A21056 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
 		471EF6ED2811A3CB00A21056 /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
-		471EF6EF2811A52000A21056 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		471EF6EF2811A52000A21056 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		471EF6F12811B3D800A21056 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		4763ADAE2811FD83006D20C8 /* ArtistCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistCell.swift; sourceTree = "<group>"; };
+		4763ADB02811FDAF006D20C8 /* ArtistCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArtistCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +175,7 @@
 		471EF6C52810947F00A21056 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				4763ADAD2811FD62006D20C8 /* Views */,
 				471EF6C6281094C200A21056 /* HomeViewController.swift */,
 				471EF6C82810950100A21056 /* HomeViewController.xib */,
 				471EF6E628119FD300A21056 /* HomeCoordinator.swift */,
@@ -224,7 +229,7 @@
 			isa = PBXGroup;
 			children = (
 				471EF6D82810B28300A21056 /* UIView.swift */,
-				471EF6EF2811A52000A21056 /* UIViewController.swift */,
+				471EF6EF2811A52000A21056 /* BaseViewController.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -255,6 +260,15 @@
 				471EF6F12811B3D800A21056 /* AppCoordinator.swift */,
 			);
 			path = Navigation;
+			sourceTree = "<group>";
+		};
+		4763ADAD2811FD62006D20C8 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4763ADAE2811FD83006D20C8 /* ArtistCell.swift */,
+				4763ADB02811FDAF006D20C8 /* ArtistCell.xib */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -363,6 +377,7 @@
 			files = (
 				471EF6A1281091B400A21056 /* LaunchScreen.storyboard in Resources */,
 				471EF69E281091B400A21056 /* Assets.xcassets in Resources */,
+				4763ADB12811FDAF006D20C8 /* ArtistCell.xib in Resources */,
 				471EF6C92810950100A21056 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -390,6 +405,7 @@
 			files = (
 				471EF695281091B100A21056 /* AppDelegate.swift in Sources */,
 				471EF6D02810AE2A00A21056 /* API.swift in Sources */,
+				4763ADAF2811FD83006D20C8 /* ArtistCell.swift in Sources */,
 				471EF6F22811B3D800A21056 /* AppCoordinator.swift in Sources */,
 				471EF6E3281190E400A21056 /* ErrorHelper.swift in Sources */,
 				471EF6D22810AEA000A21056 /* Artist.swift in Sources */,
@@ -403,7 +419,7 @@
 				471EF6DC2810B2F800A21056 /* LoadableImageView.swift in Sources */,
 				471EF6C7281094C300A21056 /* HomeViewController.swift in Sources */,
 				471EF6D42810AEA700A21056 /* Album.swift in Sources */,
-				471EF6F02811A52000A21056 /* UIViewController.swift in Sources */,
+				471EF6F02811A52000A21056 /* BaseViewController.swift in Sources */,
 				471EF6D62810B14700A21056 /* Track.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
