@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CustomImageView: UIImageView {
+class LoadableImageView: UIImageView {
     
     private var currentTask: URLSessionTask?
     private lazy var activity: UIActivityIndicatorView = {
@@ -19,7 +19,13 @@ class CustomImageView: UIImageView {
     
     var imageUrlString: String?
     
-    func setupActivity() {
+    init() {
+        super.init(image: nil, highlightedImage: nil)
+        activity.fill(in: self)
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
         activity.fill(in: self)
     }
     

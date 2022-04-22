@@ -32,6 +32,21 @@
 		471EF6F22811B3D800A21056 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471EF6F12811B3D800A21056 /* AppCoordinator.swift */; };
 		4763ADAF2811FD83006D20C8 /* ArtistCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4763ADAE2811FD83006D20C8 /* ArtistCell.swift */; };
 		4763ADB12811FDAF006D20C8 /* ArtistCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4763ADB02811FDAF006D20C8 /* ArtistCell.xib */; };
+		4763ADB32812ED4C006D20C8 /* ArtistCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4763ADB22812ED4B006D20C8 /* ArtistCoordinator.swift */; };
+		4763ADB52812ED58006D20C8 /* ArtistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4763ADB42812ED58006D20C8 /* ArtistViewController.swift */; };
+		4763ADB72812ED63006D20C8 /* ArtistViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4763ADB62812ED62006D20C8 /* ArtistViewController.xib */; };
+		4763ADB92812ED70006D20C8 /* ArtistViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4763ADB82812ED70006D20C8 /* ArtistViewModel.swift */; };
+		4763ADBB2812FAEC006D20C8 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4763ADBA2812FAEB006D20C8 /* Router.swift */; };
+		4763ADBD2812FB31006D20C8 /* Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4763ADBC2812FB31006D20C8 /* Presentable.swift */; };
+		479F287D281301D9009DCE91 /* AlbumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479F287C281301D9009DCE91 /* AlbumCell.swift */; };
+		479F287F281301E4009DCE91 /* AlbumCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 479F287E281301E4009DCE91 /* AlbumCell.xib */; };
+		479F288128130CE2009DCE91 /* AlbumViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 479F288028130CE2009DCE91 /* AlbumViewController.xib */; };
+		479F288328130CEF009DCE91 /* AlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479F288228130CEF009DCE91 /* AlbumViewController.swift */; };
+		479F288528130CFA009DCE91 /* AlbumViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479F288428130CF9009DCE91 /* AlbumViewModel.swift */; };
+		479F288828130F4E009DCE91 /* TrackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479F288728130F4D009DCE91 /* TrackCell.swift */; };
+		479F288A28130F55009DCE91 /* TrackCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 479F288928130F54009DCE91 /* TrackCell.xib */; };
+		479F288C281315AF009DCE91 /* Integer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479F288B281315AF009DCE91 /* Integer.swift */; };
+		479F288E281317B1009DCE91 /* ScretchyTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479F288D281317B1009DCE91 /* ScretchyTableViewHeader.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +96,21 @@
 		471EF6F12811B3D800A21056 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		4763ADAE2811FD83006D20C8 /* ArtistCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistCell.swift; sourceTree = "<group>"; };
 		4763ADB02811FDAF006D20C8 /* ArtistCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArtistCell.xib; sourceTree = "<group>"; };
+		4763ADB22812ED4B006D20C8 /* ArtistCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistCoordinator.swift; sourceTree = "<group>"; };
+		4763ADB42812ED58006D20C8 /* ArtistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistViewController.swift; sourceTree = "<group>"; };
+		4763ADB62812ED62006D20C8 /* ArtistViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArtistViewController.xib; sourceTree = "<group>"; };
+		4763ADB82812ED70006D20C8 /* ArtistViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistViewModel.swift; sourceTree = "<group>"; };
+		4763ADBA2812FAEB006D20C8 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		4763ADBC2812FB31006D20C8 /* Presentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presentable.swift; sourceTree = "<group>"; };
+		479F287C281301D9009DCE91 /* AlbumCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCell.swift; sourceTree = "<group>"; };
+		479F287E281301E4009DCE91 /* AlbumCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlbumCell.xib; sourceTree = "<group>"; };
+		479F288028130CE2009DCE91 /* AlbumViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlbumViewController.xib; sourceTree = "<group>"; };
+		479F288228130CEF009DCE91 /* AlbumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumViewController.swift; sourceTree = "<group>"; };
+		479F288428130CF9009DCE91 /* AlbumViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumViewModel.swift; sourceTree = "<group>"; };
+		479F288728130F4D009DCE91 /* TrackCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackCell.swift; sourceTree = "<group>"; };
+		479F288928130F54009DCE91 /* TrackCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrackCell.xib; sourceTree = "<group>"; };
+		479F288B281315AF009DCE91 /* Integer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Integer.swift; sourceTree = "<group>"; };
+		479F288D281317B1009DCE91 /* ScretchyTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScretchyTableViewHeader.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,6 +226,11 @@
 		471EF6CB2810AA2100A21056 /* Artist */ = {
 			isa = PBXGroup;
 			children = (
+				479F287B281301C3009DCE91 /* Views */,
+				4763ADB22812ED4B006D20C8 /* ArtistCoordinator.swift */,
+				4763ADB42812ED58006D20C8 /* ArtistViewController.swift */,
+				4763ADB62812ED62006D20C8 /* ArtistViewController.xib */,
+				4763ADB82812ED70006D20C8 /* ArtistViewModel.swift */,
 			);
 			path = Artist;
 			sourceTree = "<group>";
@@ -203,6 +238,10 @@
 		471EF6CC2810AA3300A21056 /* Album */ = {
 			isa = PBXGroup;
 			children = (
+				479F288628130F2A009DCE91 /* View */,
+				479F288028130CE2009DCE91 /* AlbumViewController.xib */,
+				479F288228130CEF009DCE91 /* AlbumViewController.swift */,
+				479F288428130CF9009DCE91 /* AlbumViewModel.swift */,
 			);
 			path = Album;
 			sourceTree = "<group>";
@@ -230,6 +269,7 @@
 			children = (
 				471EF6D82810B28300A21056 /* UIView.swift */,
 				471EF6EF2811A52000A21056 /* BaseViewController.swift */,
+				479F288B281315AF009DCE91 /* Integer.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -258,6 +298,8 @@
 				471EF6EB2811A3AF00A21056 /* Coordinator.swift */,
 				471EF6ED2811A3CB00A21056 /* BaseCoordinator.swift */,
 				471EF6F12811B3D800A21056 /* AppCoordinator.swift */,
+				4763ADBA2812FAEB006D20C8 /* Router.swift */,
+				4763ADBC2812FB31006D20C8 /* Presentable.swift */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -269,6 +311,25 @@
 				4763ADB02811FDAF006D20C8 /* ArtistCell.xib */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		479F287B281301C3009DCE91 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				479F287C281301D9009DCE91 /* AlbumCell.swift */,
+				479F287E281301E4009DCE91 /* AlbumCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		479F288628130F2A009DCE91 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				479F288728130F4D009DCE91 /* TrackCell.swift */,
+				479F288928130F54009DCE91 /* TrackCell.xib */,
+				479F288D281317B1009DCE91 /* ScretchyTableViewHeader.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -376,8 +437,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				471EF6A1281091B400A21056 /* LaunchScreen.storyboard in Resources */,
+				479F288128130CE2009DCE91 /* AlbumViewController.xib in Resources */,
+				479F287F281301E4009DCE91 /* AlbumCell.xib in Resources */,
+				479F288A28130F55009DCE91 /* TrackCell.xib in Resources */,
 				471EF69E281091B400A21056 /* Assets.xcassets in Resources */,
 				4763ADB12811FDAF006D20C8 /* ArtistCell.xib in Resources */,
+				4763ADB72812ED63006D20C8 /* ArtistViewController.xib in Resources */,
 				471EF6C92810950100A21056 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -403,24 +468,35 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4763ADBB2812FAEC006D20C8 /* Router.swift in Sources */,
 				471EF695281091B100A21056 /* AppDelegate.swift in Sources */,
 				471EF6D02810AE2A00A21056 /* API.swift in Sources */,
 				4763ADAF2811FD83006D20C8 /* ArtistCell.swift in Sources */,
 				471EF6F22811B3D800A21056 /* AppCoordinator.swift in Sources */,
 				471EF6E3281190E400A21056 /* ErrorHelper.swift in Sources */,
+				479F288328130CEF009DCE91 /* AlbumViewController.swift in Sources */,
+				4763ADB32812ED4C006D20C8 /* ArtistCoordinator.swift in Sources */,
+				479F288528130CFA009DCE91 /* AlbumViewModel.swift in Sources */,
+				479F288E281317B1009DCE91 /* ScretchyTableViewHeader.swift in Sources */,
+				4763ADBD2812FB31006D20C8 /* Presentable.swift in Sources */,
 				471EF6D22810AEA000A21056 /* Artist.swift in Sources */,
+				479F288828130F4E009DCE91 /* TrackCell.swift in Sources */,
 				471EF6E528119F4400A21056 /* Bindable.swift in Sources */,
 				471EF6E728119FD300A21056 /* HomeCoordinator.swift in Sources */,
+				479F287D281301D9009DCE91 /* AlbumCell.swift in Sources */,
 				471EF6EC2811A3AF00A21056 /* Coordinator.swift in Sources */,
 				471EF6DF2810B39F00A21056 /* ImageCache.swift in Sources */,
 				471EF6D92810B28300A21056 /* UIView.swift in Sources */,
+				479F288C281315AF009DCE91 /* Integer.swift in Sources */,
 				471EF6E928119FDD00A21056 /* HomeViewModel.swift in Sources */,
 				471EF6EE2811A3CB00A21056 /* BaseCoordinator.swift in Sources */,
 				471EF6DC2810B2F800A21056 /* LoadableImageView.swift in Sources */,
 				471EF6C7281094C300A21056 /* HomeViewController.swift in Sources */,
 				471EF6D42810AEA700A21056 /* Album.swift in Sources */,
 				471EF6F02811A52000A21056 /* BaseViewController.swift in Sources */,
+				4763ADB92812ED70006D20C8 /* ArtistViewModel.swift in Sources */,
 				471EF6D62810B14700A21056 /* Track.swift in Sources */,
+				4763ADB52812ED58006D20C8 /* ArtistViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -19,7 +19,7 @@
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fjS-jg-HH2">
                         <rect key="frame" x="2" y="2" width="410" height="40"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="D9C-7J-B1I" customClass="CustomImageView" customModule="Deezer" customModuleProvider="target">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="D9C-7J-B1I" customClass="LoadableImageView" customModule="Deezer" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="60" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="wEX-iz-8Oy"/>

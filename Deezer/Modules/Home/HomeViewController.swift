@@ -9,11 +9,11 @@ import UIKit
 
 final class HomeViewController: BaseViewController {
         
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet private weak var tableView: UITableView!
     
     let searchController = UISearchController(searchResultsController: nil)
-    let cellIdentifier = "ArtistCell"
     var viewModel: HomeViewModelProtocol?
+    var onShowArtist: ((Int) -> Void)?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,6 +27,7 @@ final class HomeViewController: BaseViewController {
         let reuseId = String(describing: ArtistCell.self)
         let cellNib = UINib(nibName: reuseId, bundle: Bundle(for: ArtistCell.self))
         tableView.register(cellNib, forCellReuseIdentifier: reuseId)
+        tableView.delegate = self
         tableView.dataSource = self
         tableView.separatorStyle = .none
     }
@@ -52,23 +53,51 @@ final class HomeViewController: BaseViewController {
     }
     
     private func binding() {
-        viewModel?.artists.bind({[weak self] artists in
+        viewModel?.artists.bind {[weak self] artists in
             DispatchQueue.main.async {[weak self] in
                 self?.activity.stopAnimating()
                 self?.tableView.reloadData()
             }
-        })
+        }
         
-        viewModel?.error.bind({[weak self] error in
+        viewModel?.albums.bind {[weak self] albums  in
+            DispatchQueue.main.async {
+                guard let albums = albums else { return }
+                let viewModel = ArtistViewModel(API(), artist: self?.viewModel?.selectedArtist, albums: albums)
+                let vca = ArtistViewController()
+                vca.viewModel = viewModel
+                self?.navigationController?.pushViewController(vca, animated: true)
+                #warning("ToDo: make clear navigation")
+        //        onShowArtist?(artistID)
+            }
+        }
+        
+        viewModel?.error.bind {[weak self] error in
             DispatchQueue.main.async {[weak self] in
                 self?.activity.stopAnimating()
                 self?.showAlert(withTitle: "Error", message: error?.localizedDescription)
             }
-        })
+        }
+    }
+}
+
+extension HomeViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let count = viewModel?.artists.value?.count, count > indexPath.row else { return }
+        guard let artistID = viewModel?.artists.value?[indexPath.row].id else { return }
+        
+        let artist = viewModel?.artists.value?[indexPath.row]
+        viewModel?.selectedArtist = artist
+        viewModel?.getAlbums(for: artistID)
     }
 }
 
 extension HomeViewController: UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+       return "ARTISTS"
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel?.artists.value?.count ?? 0
     }
