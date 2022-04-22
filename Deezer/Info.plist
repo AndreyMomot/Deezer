@@ -15,5 +15,7 @@
 			</dict>
 		</dict>
 	</dict>
+	<key>UIUserInterfaceStyle</key>
+	<string>Dark</string>
 </dict>
 </plist>
