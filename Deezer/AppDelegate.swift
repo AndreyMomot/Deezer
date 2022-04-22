@@ -16,7 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window = UIWindow(frame: UIScreen.main.bounds)
 
-        let coordinator = AppCoordinator()
+        let coordinator = BaseCoordinator(with: API())
         
         let navigationController = coordinator.start(HomeCoordinator.self)
         window?.rootViewController = navigationController

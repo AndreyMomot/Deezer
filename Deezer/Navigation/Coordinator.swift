@@ -7,6 +7,6 @@
 
 import Foundation
 
-protocol Coordinator: AnyObject {
+protocol Coordinator: AnyObject, Presentable {
     func start()
 }
