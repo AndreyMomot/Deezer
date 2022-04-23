@@ -48,6 +48,7 @@
 		479F2896281430F1009DCE91 /* AlbumCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479F2895281430F1009DCE91 /* AlbumCoordinator.swift */; };
 		479F289C28144086009DCE91 /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479F289B28144086009DCE91 /* AppColor.swift */; };
 		479F289E2814413C009DCE91 /* ArtistHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479F289D2814413C009DCE91 /* ArtistHeaderView.swift */; };
+		479F28A028144799009DCE91 /* SearchFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479F289F28144799009DCE91 /* SearchFooter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +114,7 @@
 		479F2895281430F1009DCE91 /* AlbumCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCoordinator.swift; sourceTree = "<group>"; };
 		479F289B28144086009DCE91 /* AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
 		479F289D2814413C009DCE91 /* ArtistHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistHeaderView.swift; sourceTree = "<group>"; };
+		479F289F28144799009DCE91 /* SearchFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFooter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -312,6 +314,7 @@
 				4763ADAE2811FD83006D20C8 /* ArtistCell.swift */,
 				4763ADB02811FDAF006D20C8 /* ArtistCell.xib */,
 				479F289D2814413C009DCE91 /* ArtistHeaderView.swift */,
+				479F289F28144799009DCE91 /* SearchFooter.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -486,6 +489,7 @@
 				471EF6E528119F4400A21056 /* Bindable.swift in Sources */,
 				471EF6E728119FD300A21056 /* HomeCoordinator.swift in Sources */,
 				479F289E2814413C009DCE91 /* ArtistHeaderView.swift in Sources */,
+				479F28A028144799009DCE91 /* SearchFooter.swift in Sources */,
 				479F287D281301D9009DCE91 /* AlbumCell.swift in Sources */,
 				471EF6EC2811A3AF00A21056 /* Coordinator.swift in Sources */,
 				471EF6DF2810B39F00A21056 /* ImageCache.swift in Sources */,

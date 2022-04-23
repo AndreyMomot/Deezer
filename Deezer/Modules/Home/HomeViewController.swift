@@ -10,7 +10,9 @@ import UIKit
 final class HomeViewController: BaseViewController {
         
     @IBOutlet private weak var tableView: UITableView!
-    
+    @IBOutlet private weak var searchFooter: SearchFooter!
+    @IBOutlet private weak var searchFooterBottomConstraint: NSLayoutConstraint!
+        
     private let searchController = UISearchController(searchResultsController: nil)
     var viewModel: HomeViewModelProtocol?
     var onShowArtist: (([Album]) -> Void)?
@@ -21,6 +23,11 @@ final class HomeViewController: BaseViewController {
         configureTableView()
         configureSearchController()
         binding()
+        addNotifications()
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
     }
     
     private func configureTableView() {
@@ -41,6 +48,20 @@ final class HomeViewController: BaseViewController {
         definesPresentationContext = true
     }
     
+    private func addNotifications() {
+        let notificationCenter = NotificationCenter.default
+        notificationCenter.addObserver(forName: UIResponder.keyboardWillChangeFrameNotification,
+                                       object: nil,
+                                       queue: .main) {[weak self] notification in
+                                        self?.handleKeyboard(notification: notification)
+        }
+        notificationCenter.addObserver(forName: UIResponder.keyboardWillHideNotification,
+                                       object: nil,
+                                       queue: .main) {[weak self] notification in
+                                        self?.handleKeyboard(notification: notification)
+        }
+    }
+    
     private func search(for string: String?) {
         // Handle correnct search request
         guard let string = string?.trimmingCharacters(in: .whitespaces), !string.isEmpty else {
@@ -58,6 +79,9 @@ final class HomeViewController: BaseViewController {
     private func binding() {
         viewModel?.artists.bind {[weak self] artists in
             DispatchQueue.main.async {
+                if let count = artists?.count {
+                    self?.searchFooter.setFooter(with: count)
+                }
                 self?.activity.stopAnimating()
                 self?.tableView.reloadData()
             }
@@ -76,6 +100,23 @@ final class HomeViewController: BaseViewController {
                 self?.showAlert(withTitle: "Error", message: error?.localizedDescription)
             }
         }
+    }
+    
+    private func handleKeyboard(notification: Notification) {
+      guard notification.name == UIResponder.keyboardWillChangeFrameNotification else {
+        searchFooterBottomConstraint.constant = 0
+        view.layoutIfNeeded()
+        return
+      }
+      
+      guard let info = notification.userInfo,
+        let keyboardFrame = info[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue else { return  }
+      
+      let keyboardHeight = keyboardFrame.cgRectValue.size.height
+      UIView.animate(withDuration: 0.1, animations: {[weak self] () -> Void in
+        self?.searchFooterBottomConstraint.constant = keyboardHeight
+        self?.view.layoutIfNeeded()
+      })
     }
 }
 

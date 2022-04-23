@@ -50,8 +50,8 @@ final class API: APIProtocol {
     }
         
     private func getRequest<T: Decodable>(_ path: String, decode decodable: T.Type, completion: @escaping (Result<T, Error>) -> Void) {
-        let fullPath = "\(baseURL)\(path)"
-        guard let url = URL(string: fullPath) else {
+        let fullPath = "\(baseURL)\(path)".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
+        guard let fullPath = fullPath, let url = URL(string: fullPath) else {
             let error = AppError.defaultError
             completion(.failure(error))
             return
