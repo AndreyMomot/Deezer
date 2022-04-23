@@ -9,13 +9,11 @@ import UIKit
 
 final class AlbumCoordinator: BaseCoordinator {
     private let presenter: UINavigationController
-    private let api: API
     private let album: Album
-    private var albumViewController: AlbumViewController?
+    var albumViewController: AlbumViewController?
     
-    init(presenter: UINavigationController, api: API, album: Album) {
+    init(presenter: UINavigationController, album: Album) {
         self.presenter = presenter
-        self.api = api
         self.album = album
     }
     

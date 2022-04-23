@@ -9,28 +9,88 @@ import XCTest
 @testable import Deezer
 
 class DeezerTests: XCTestCase {
-
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
-    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    
+    func testArtistCoordinator() {
+        let bundle = Bundle(for: DeezerTests.self)
+        guard let url = bundle.url(forResource: "artbat", withExtension: "json") else { return }
+        do {
+            let data = try Data(contentsOf: url)
+            let decoder = JSONDecoder()
+            let jsonData = try decoder.decode(AlbumsResponse.self, from: data)
+            let albums = jsonData.data
+            let artist = Artist(id: 1, name: "Artbat", picture: nil)
+            
+            let nav = UINavigationController()
+            let api = API()
+            let coordinator = ArtistCoordinator(presenter: nav, api: api, artist: artist, albums: albums)
+            coordinator.start()
+            
+            XCTAssertEqual(coordinator.artistViewController?.viewModel?.albums.value?.count, 24)
+            XCTAssertEqual(coordinator.artistViewController?.viewModel?.artist?.id, 1)
+        } catch {
+            XCTFail(error.localizedDescription)
         }
     }
-
+    
+    func testArtistViewModel() {
+        let bundle = Bundle(for: DeezerTests.self)
+        guard let url = bundle.url(forResource: "artbat", withExtension: "json") else { return }
+        do {
+            let data = try Data(contentsOf: url)
+            let decoder = JSONDecoder()
+            let jsonData = try decoder.decode(AlbumsResponse.self, from: data)
+            let albums = jsonData.data
+            let artist = Artist(id: 1, name: "Artbat", picture: nil)
+            let api = API()
+            
+            let viewModel = ArtistViewModel(with: api, artist: artist, albums: albums)
+            let artistViewController = ArtistViewController.loadFromNib()
+            artistViewController.viewModel = viewModel
+            
+            XCTAssertEqual(viewModel.albums.value?.count, 24)
+            XCTAssertEqual(viewModel.artist?.id, 1)
+        } catch {
+            XCTFail(error.localizedDescription)
+        }
+    }
+    
+    func testAlbumCoordinator() {
+        let bundle = Bundle(for: DeezerTests.self)
+        guard let url = bundle.url(forResource: "albums", withExtension: "json") else { return }
+        do {
+            let data = try Data(contentsOf: url)
+            let decoder = JSONDecoder()
+            let album = try decoder.decode(Album.self, from: data)
+            
+            let nav = UINavigationController()
+            let coordinator = AlbumCoordinator(presenter: nav, album: album)
+            coordinator.start()
+            
+            XCTAssertEqual(coordinator.albumViewController?.viewModel?.album.tracks?.data.count, 3)
+            XCTAssertEqual(coordinator.albumViewController?.viewModel?.album.title, "Upperground - EP")
+            XCTAssertEqual(coordinator.albumViewController?.viewModel?.album.id, 81332322)
+        } catch {
+            XCTFail(error.localizedDescription)
+        }
+    }
+    
+    func testAlbumViewModel() {
+        let bundle = Bundle(for: DeezerTests.self)
+        guard let url = bundle.url(forResource: "albums", withExtension: "json") else { return }
+        do {
+            let data = try Data(contentsOf: url)
+            let decoder = JSONDecoder()
+            let album = try decoder.decode(Album.self, from: data)
+            
+            let viewModel = AlbumViewModel(with: album)
+            let albumViewController = AlbumViewController.loadFromNib()
+            albumViewController.viewModel = viewModel
+            
+            XCTAssertEqual(viewModel.album.tracks?.data.count, 3)
+            XCTAssertEqual(viewModel.album.title, "Upperground - EP")
+            XCTAssertEqual(viewModel.album.id, 81332322)
+        } catch {
+            XCTFail(error.localizedDescription)
+        }
+    }
 }

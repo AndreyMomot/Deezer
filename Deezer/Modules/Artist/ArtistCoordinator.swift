@@ -12,7 +12,7 @@ final class ArtistCoordinator: BaseCoordinator {
     private let api: API
     private let artist: Artist?
     private let albums: [Album]?
-    private var artistViewController: ArtistViewController?
+    var artistViewController: ArtistViewController?
     private var albumCoordinator: AlbumCoordinator?
     
     init(presenter: UINavigationController, api: API, artist: Artist?, albums: [Album]?) {
@@ -39,7 +39,7 @@ final class ArtistCoordinator: BaseCoordinator {
 extension ArtistCoordinator {
     
     func showAlbumDetails(with album: Album) {
-        let albumCoordinator = AlbumCoordinator(presenter: presenter, api: api, album: album)
+        let albumCoordinator = AlbumCoordinator(presenter: presenter, album: album)
         albumCoordinator.start()
         
         self.albumCoordinator = albumCoordinator
