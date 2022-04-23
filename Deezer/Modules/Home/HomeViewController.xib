@@ -5,12 +5,14 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="Deezer" customModuleProvider="target">
             <connections>
+                <outlet property="searchFooter" destination="43q-Zi-Rlv" id="aeD-ZH-YwC"/>
+                <outlet property="searchFooterBottomConstraint" destination="xrZ-BZ-7dK" id="2YI-XU-GDl"/>
+                <outlet property="tableView" destination="hBt-OL-vkp" id="Qce-8a-N2k"/>
                 <outlet property="view" destination="iN0-l3-epB" id="WA4-wm-p6s"/>
             </connections>
         </placeholder>
@@ -18,14 +20,33 @@
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" keyboardDismissMode="onDrag" style="plain" rowHeight="44" estimatedRowHeight="44" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="hBt-OL-vkp">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="separatorColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="43q-Zi-Rlv" customClass="SearchFooter" customModule="Deezer" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="818" width="414" height="44"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="fMz-OQ-ZfZ"/>
+                    </constraints>
+                </view>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="43q-Zi-Rlv" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="KNe-ss-EDo"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="43q-Zi-Rlv" secondAttribute="trailing" id="L75-Km-thf"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="hBt-OL-vkp" secondAttribute="bottom" id="PQS-3I-smZ"/>
+                <constraint firstItem="hBt-OL-vkp" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="dto-DV-uAt"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="hBt-OL-vkp" secondAttribute="trailing" id="nei-YJ-df6"/>
+                <constraint firstItem="hBt-OL-vkp" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="prz-gJ-2cs"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="43q-Zi-Rlv" secondAttribute="bottom" id="xrZ-BZ-7dK"/>
+            </constraints>
             <point key="canvasLocation" x="139" y="102"/>
         </view>
     </objects>
-    <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-    </resources>
 </document>

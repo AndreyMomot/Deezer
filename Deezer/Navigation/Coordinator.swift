@@ -5,8 +5,6 @@
 //  Created by Andrii Momot on 21.04.2022.
 //
 
-import Foundation
-
-protocol Coordinator: AnyObject {
+protocol Coordinator {
     func start()
 }

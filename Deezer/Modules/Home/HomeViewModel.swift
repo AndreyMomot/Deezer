@@ -9,26 +9,33 @@ import Foundation
 
 protocol HomeViewModelProtocol {
     func search(for artist: String)
+    func getAlbums(for artistID: Int)
     
     var artists: Bindable<[Artist]> { get }
+    var albums: Bindable<[Album]> { get }
     var error: Bindable<Error> { get }
+    var selectedArtist: Artist? { get set }
+    var previousSearch: String? { get set }
 }
 
-class HomeViewModel: HomeViewModelProtocol {
-    let api: APIProtocol
+final class HomeViewModel: HomeViewModelProtocol {
+    private let api: APIProtocol
     var artists = Bindable<[Artist]>()
+    var albums = Bindable<[Album]>()
     var error = Bindable<Error>()
+    var selectedArtist: Artist?
+    var previousSearch: String?
     
-    init(_ api: APIProtocol) {
+    init(with api: APIProtocol) {
         self.api = api
     }
     
     func search(for artist: String) {
+        previousSearch = artist
         api.search(for: artist) {[weak self] result  in
             switch result {
             case .success(let artists):
                 self?.artists.value = artists
-                self?.getAlbums(for: artists.first!.id)
             case .failure(let error):
                 self?.error.value = error
             }
@@ -39,25 +46,10 @@ class HomeViewModel: HomeViewModelProtocol {
         api.getAlbums(for: artistID) {[weak self] result in
             switch result {
             case .success(let albums):
-                print(albums)
-                self?.getAlbumInfo(for: albums.first!.id)
+                self?.albums.value = albums
             case .failure(let error):
                 self?.error.value = error
             }
         }
     }
-    
-    func getAlbumInfo(for albumID: Int) {
-        api.getAlbumInfo(albumID) {[weak self] result in
-            switch result {
-            case .success(let album):
-                print(album)
-                
-            case .failure(let error):
-                self?.error.value = error
-            }
-        }
-    }
-    
-    
 }

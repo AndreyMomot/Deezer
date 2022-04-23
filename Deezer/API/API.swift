@@ -14,7 +14,6 @@ protocol APIProtocol {
 }
 
 final class API: APIProtocol {
-
     private let baseURL = "https://api.deezer.com/"
     private let searchArtist = "search/artist?q="
     private let artist = "artist"
@@ -51,8 +50,8 @@ final class API: APIProtocol {
     }
         
     private func getRequest<T: Decodable>(_ path: String, decode decodable: T.Type, completion: @escaping (Result<T, Error>) -> Void) {
-        let fullPath = "\(baseURL)\(path)"
-        guard let url = URL(string: fullPath) else {
+        let fullPath = "\(baseURL)\(path)".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
+        guard let fullPath = fullPath, let url = URL(string: fullPath) else {
             let error = AppError.defaultError
             completion(.failure(error))
             return
@@ -62,7 +61,6 @@ final class API: APIProtocol {
     }
     
     private func performRequest<T: Decodable>(_ request: URLRequest, decode decodable: T.Type, result: @escaping (Result<T, Error>) -> Void) {
-
         URLSession.shared.dataTask(with: request) { (data, response, error) in
             guard let data = data else { return }
             do {

@@ -15,6 +15,11 @@ struct Album: Decodable {
     let id: Int
     let title: String
     let cover: String?
-    let artist: Artist?
+    let bigCover: String?
+    var artist: Artist?
     let tracks: TracksResponse?
+    
+    private enum CodingKeys : String, CodingKey {
+        case id, title, cover, bigCover = "cover_big", artist, tracks
+    }
 }

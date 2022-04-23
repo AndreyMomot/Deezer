@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CustomImageView: UIImageView {
+class LoadableImageView: UIImageView {
     
     private var currentTask: URLSessionTask?
     private lazy var activity: UIActivityIndicatorView = {
@@ -19,12 +19,17 @@ class CustomImageView: UIImageView {
     
     var imageUrlString: String?
     
-    func setupActivity() {
+    init() {
+        super.init(image: nil, highlightedImage: nil)
+        activity.fill(in: self)
+    }
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
         activity.fill(in: self)
     }
     
     func loadImageWithUrl(urlString: String) {
-        activity.startAnimating()
         weak var oldTask = currentTask
         currentTask = nil
         oldTask?.cancel()
@@ -39,8 +44,10 @@ class CustomImageView: UIImageView {
         }
         
         if let url = URL(string: urlString) {
+            activity.startAnimating()
+
             let session = URLSession.shared
-            let dataTask = session.dataTask(with: url) { [weak self] (data, response, error) in
+            let dataTask = session.dataTask(with: url) {[weak self] (data, response, error) in
                 DispatchQueue.main.async {
                     self?.activity.stopAnimating()
                 }

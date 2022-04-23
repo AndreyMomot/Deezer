@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="GdZ-Vl-Cjy" customClass="AlbumCell" customModule="Deezer" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="200" height="250"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="HDG-3s-82s">
+                <rect key="frame" x="0.0" y="0.0" width="200" height="250"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KKc-1P-kTE" customClass="LoadableImageView" customModule="Deezer" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="200" height="195"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="195" id="7s6-ys-4WS"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ev9-Tx-aWN">
+                        <rect key="frame" x="8" y="199" width="184" height="24"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l9Y-db-r9o">
+                        <rect key="frame" x="8" y="225" width="184" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" red="0.56078433989999998" green="0.56078433989999998" blue="0.5647059083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="l9Y-db-r9o" firstAttribute="trailing" secondItem="ev9-Tx-aWN" secondAttribute="trailing" id="37A-6i-vQV"/>
+                    <constraint firstItem="ev9-Tx-aWN" firstAttribute="leading" secondItem="HDG-3s-82s" secondAttribute="leading" constant="8" id="3nH-Ra-tev"/>
+                    <constraint firstAttribute="trailing" secondItem="KKc-1P-kTE" secondAttribute="trailing" id="6c6-p0-pqw"/>
+                    <constraint firstItem="KKc-1P-kTE" firstAttribute="leading" secondItem="HDG-3s-82s" secondAttribute="leading" id="IDg-Aw-Dy9"/>
+                    <constraint firstAttribute="trailing" secondItem="ev9-Tx-aWN" secondAttribute="trailing" constant="8" id="M6y-D3-w5S"/>
+                    <constraint firstItem="ev9-Tx-aWN" firstAttribute="top" secondItem="KKc-1P-kTE" secondAttribute="bottom" constant="4" id="XUc-aS-UUL"/>
+                    <constraint firstItem="l9Y-db-r9o" firstAttribute="leading" secondItem="ev9-Tx-aWN" secondAttribute="leading" id="blO-rO-Weg"/>
+                    <constraint firstAttribute="bottom" secondItem="l9Y-db-r9o" secondAttribute="bottom" constant="4" id="uuX-o4-gb0"/>
+                    <constraint firstItem="KKc-1P-kTE" firstAttribute="top" secondItem="HDG-3s-82s" secondAttribute="top" id="xOk-u3-KEF"/>
+                    <constraint firstItem="l9Y-db-r9o" firstAttribute="top" secondItem="ev9-Tx-aWN" secondAttribute="bottom" constant="2" id="zVB-uf-Yor"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <size key="customSize" width="336" height="290"/>
+            <connections>
+                <outlet property="albumImageView" destination="KKc-1P-kTE" id="UHU-ss-wKQ"/>
+                <outlet property="subtitleLabel" destination="l9Y-db-r9o" id="jUQ-0y-n14"/>
+                <outlet property="titleLabel" destination="ev9-Tx-aWN" id="wTl-kF-bEY"/>
+            </connections>
+            <point key="canvasLocation" x="273.91304347826087" y="135.9375"/>
+        </collectionViewCell>
+    </objects>
+</document>
