@@ -24,22 +24,24 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ev9-Tx-aWN">
-                        <rect key="frame" x="8" y="199" width="48" height="24"/>
+                        <rect key="frame" x="8" y="199" width="184" height="24"/>
                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l9Y-db-r9o">
-                        <rect key="frame" x="8" y="225" width="42" height="21"/>
+                        <rect key="frame" x="8" y="225" width="184" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" red="0.56078433989999998" green="0.56078433989999998" blue="0.5647059083" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="l9Y-db-r9o" firstAttribute="trailing" secondItem="ev9-Tx-aWN" secondAttribute="trailing" id="37A-6i-vQV"/>
                     <constraint firstItem="ev9-Tx-aWN" firstAttribute="leading" secondItem="HDG-3s-82s" secondAttribute="leading" constant="8" id="3nH-Ra-tev"/>
                     <constraint firstAttribute="trailing" secondItem="KKc-1P-kTE" secondAttribute="trailing" id="6c6-p0-pqw"/>
                     <constraint firstItem="KKc-1P-kTE" firstAttribute="leading" secondItem="HDG-3s-82s" secondAttribute="leading" id="IDg-Aw-Dy9"/>
+                    <constraint firstAttribute="trailing" secondItem="ev9-Tx-aWN" secondAttribute="trailing" constant="8" id="M6y-D3-w5S"/>
                     <constraint firstItem="ev9-Tx-aWN" firstAttribute="top" secondItem="KKc-1P-kTE" secondAttribute="bottom" constant="4" id="XUc-aS-UUL"/>
                     <constraint firstItem="l9Y-db-r9o" firstAttribute="leading" secondItem="ev9-Tx-aWN" secondAttribute="leading" id="blO-rO-Weg"/>
                     <constraint firstAttribute="bottom" secondItem="l9Y-db-r9o" secondAttribute="bottom" constant="4" id="uuX-o4-gb0"/>

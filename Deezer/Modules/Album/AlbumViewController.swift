@@ -31,7 +31,7 @@ final class AlbumViewController: BaseViewController {
     
     // MARK: - UITableView header imageView set up using UIScrollViewDelegate
     private func configureHeaderView() {
-        let height = view.frame.height * 0.6
+        let height = tableView.frame.height * 0.5
         let headerView = StretchyTableHeaderView(frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: height))
         headerView.imageView.loadImageWithUrl(urlString: viewModel?.album.bigCover ?? "")
         self.tableView.tableHeaderView = headerView

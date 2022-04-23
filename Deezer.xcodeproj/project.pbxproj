@@ -46,6 +46,8 @@
 		479F289228142C4E009DCE91 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479F289128142C4E009DCE91 /* AppCoordinator.swift */; };
 		479F289428142D8D009DCE91 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479F289328142D8C009DCE91 /* BaseCoordinator.swift */; };
 		479F2896281430F1009DCE91 /* AlbumCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479F2895281430F1009DCE91 /* AlbumCoordinator.swift */; };
+		479F289C28144086009DCE91 /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479F289B28144086009DCE91 /* AppColor.swift */; };
+		479F289E2814413C009DCE91 /* ArtistHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479F289D2814413C009DCE91 /* ArtistHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -109,6 +111,8 @@
 		479F289128142C4E009DCE91 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		479F289328142D8C009DCE91 /* BaseCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
 		479F2895281430F1009DCE91 /* AlbumCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCoordinator.swift; sourceTree = "<group>"; };
+		479F289B28144086009DCE91 /* AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
+		479F289D2814413C009DCE91 /* ArtistHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -287,6 +291,7 @@
 				471EF6DE2810B39F00A21056 /* ImageCache.swift */,
 				471EF6E2281190E400A21056 /* ErrorHelper.swift */,
 				471EF6E428119F4300A21056 /* Bindable.swift */,
+				479F289B28144086009DCE91 /* AppColor.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -306,6 +311,7 @@
 			children = (
 				4763ADAE2811FD83006D20C8 /* ArtistCell.swift */,
 				4763ADB02811FDAF006D20C8 /* ArtistCell.xib */,
+				479F289D2814413C009DCE91 /* ArtistHeaderView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -479,12 +485,14 @@
 				479F288828130F4E009DCE91 /* TrackCell.swift in Sources */,
 				471EF6E528119F4400A21056 /* Bindable.swift in Sources */,
 				471EF6E728119FD300A21056 /* HomeCoordinator.swift in Sources */,
+				479F289E2814413C009DCE91 /* ArtistHeaderView.swift in Sources */,
 				479F287D281301D9009DCE91 /* AlbumCell.swift in Sources */,
 				471EF6EC2811A3AF00A21056 /* Coordinator.swift in Sources */,
 				471EF6DF2810B39F00A21056 /* ImageCache.swift in Sources */,
 				471EF6D92810B28300A21056 /* UIView.swift in Sources */,
 				479F288C281315AF009DCE91 /* Integer.swift in Sources */,
 				471EF6E928119FDD00A21056 /* HomeViewModel.swift in Sources */,
+				479F289C28144086009DCE91 /* AppColor.swift in Sources */,
 				479F289428142D8D009DCE91 /* BaseCoordinator.swift in Sources */,
 				471EF6DC2810B2F800A21056 /* LoadableImageView.swift in Sources */,
 				471EF6C7281094C300A21056 /* HomeViewController.swift in Sources */,
@@ -680,7 +688,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -708,7 +716,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

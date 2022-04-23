@@ -37,6 +37,7 @@ final class HomeViewController: BaseViewController {
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.placeholder = "Search Deezer"
         navigationItem.searchController = searchController
+        navigationItem.hidesSearchBarWhenScrolling = false
         definesPresentationContext = true
     }
     
@@ -48,6 +49,8 @@ final class HomeViewController: BaseViewController {
             return
         }
         let searchString = string.replacingOccurrences(of: " ", with: "%")
+        guard searchString != viewModel?.previousSearch else { return }
+
         activity.startAnimating()
         viewModel?.search(for: searchString)
     }
@@ -85,14 +88,18 @@ extension HomeViewController: UITableViewDelegate {
         viewModel?.selectedArtist = artist
         viewModel?.getAlbums(for: artistID)
     }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = ArtistHeaderView(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: 50))
+        return headerView
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 50
+    }
 }
 
 extension HomeViewController: UITableViewDataSource {
-    
-    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-       return "ARTISTS"
-    }
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel?.artists.value?.count ?? 0
     }

@@ -15,6 +15,7 @@ protocol HomeViewModelProtocol {
     var albums: Bindable<[Album]> { get }
     var error: Bindable<Error> { get }
     var selectedArtist: Artist? { get set }
+    var previousSearch: String? { get set }
 }
 
 final class HomeViewModel: HomeViewModelProtocol {
@@ -23,12 +24,14 @@ final class HomeViewModel: HomeViewModelProtocol {
     var albums = Bindable<[Album]>()
     var error = Bindable<Error>()
     var selectedArtist: Artist?
+    var previousSearch: String?
     
     init(with api: APIProtocol) {
         self.api = api
     }
     
     func search(for artist: String) {
+        previousSearch = artist
         api.search(for: artist) {[weak self] result  in
             switch result {
             case .success(let artists):

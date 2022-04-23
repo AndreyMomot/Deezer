@@ -60,10 +60,16 @@ extension ArtistViewController: UICollectionViewDelegate {
         
         viewModel?.getAlbumInfo(for: albumID)
     }
+    
+}
+
+extension ArtistViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: collectionView.frame.width / 2.1, height: 250)
+    }
 }
 
 extension ArtistViewController: UICollectionViewDataSource {
-    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return viewModel?.albums.value?.count ?? 0
     }
