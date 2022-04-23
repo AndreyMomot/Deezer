@@ -7,14 +7,14 @@
 
 import UIKit
 
-class StretchyTableHeaderView: UIView {
-    var imageViewHeight = NSLayoutConstraint()
-    var imageViewBottom = NSLayoutConstraint()
+final class StretchyTableHeaderView: UIView {
+    private var imageViewHeight = NSLayoutConstraint()
+    private var imageViewBottom = NSLayoutConstraint()
     
-    var containerView: UIView!
+    private var containerView: UIView!
     var imageView: LoadableImageView!
     
-    var containerViewHeight = NSLayoutConstraint()
+    private var containerViewHeight = NSLayoutConstraint()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -27,7 +27,7 @@ class StretchyTableHeaderView: UIView {
         super.init(coder: aDecoder)
     }
     
-    func createViews() {
+    private func createViews() {
         // Container View
         containerView = UIView()
         self.addSubview(containerView)
@@ -40,7 +40,7 @@ class StretchyTableHeaderView: UIView {
         containerView.addSubview(imageView)
     }
     
-    func setViewConstraints() {
+    private func setViewConstraints() {
         // UIView Constraints
         NSLayoutConstraint.activate([
             self.widthAnchor.constraint(equalTo: containerView.widthAnchor),

@@ -11,9 +11,9 @@ final class HomeViewController: BaseViewController {
         
     @IBOutlet private weak var tableView: UITableView!
     
-    let searchController = UISearchController(searchResultsController: nil)
+    private let searchController = UISearchController(searchResultsController: nil)
     var viewModel: HomeViewModelProtocol?
-    var onShowArtist: ((Int) -> Void)?
+    var onShowArtist: (([Album]) -> Void)?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,7 +54,7 @@ final class HomeViewController: BaseViewController {
     
     private func binding() {
         viewModel?.artists.bind {[weak self] artists in
-            DispatchQueue.main.async {[weak self] in
+            DispatchQueue.main.async {
                 self?.activity.stopAnimating()
                 self?.tableView.reloadData()
             }
@@ -63,17 +63,12 @@ final class HomeViewController: BaseViewController {
         viewModel?.albums.bind {[weak self] albums  in
             DispatchQueue.main.async {
                 guard let albums = albums else { return }
-                let viewModel = ArtistViewModel(API(), artist: self?.viewModel?.selectedArtist, albums: albums)
-                let vca = ArtistViewController()
-                vca.viewModel = viewModel
-                self?.navigationController?.pushViewController(vca, animated: true)
-                #warning("ToDo: make clear navigation")
-        //        onShowArtist?(artistID)
+                self?.onShowArtist?(albums)
             }
         }
         
         viewModel?.error.bind {[weak self] error in
-            DispatchQueue.main.async {[weak self] in
+            DispatchQueue.main.async {
                 self?.activity.stopAnimating()
                 self?.showAlert(withTitle: "Error", message: error?.localizedDescription)
             }

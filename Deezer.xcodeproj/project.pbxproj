@@ -27,17 +27,13 @@
 		471EF6E728119FD300A21056 /* HomeCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471EF6E628119FD300A21056 /* HomeCoordinator.swift */; };
 		471EF6E928119FDD00A21056 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471EF6E828119FDD00A21056 /* HomeViewModel.swift */; };
 		471EF6EC2811A3AF00A21056 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471EF6EB2811A3AF00A21056 /* Coordinator.swift */; };
-		471EF6EE2811A3CB00A21056 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471EF6ED2811A3CB00A21056 /* BaseCoordinator.swift */; };
 		471EF6F02811A52000A21056 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471EF6EF2811A52000A21056 /* BaseViewController.swift */; };
-		471EF6F22811B3D800A21056 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 471EF6F12811B3D800A21056 /* AppCoordinator.swift */; };
 		4763ADAF2811FD83006D20C8 /* ArtistCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4763ADAE2811FD83006D20C8 /* ArtistCell.swift */; };
 		4763ADB12811FDAF006D20C8 /* ArtistCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4763ADB02811FDAF006D20C8 /* ArtistCell.xib */; };
 		4763ADB32812ED4C006D20C8 /* ArtistCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4763ADB22812ED4B006D20C8 /* ArtistCoordinator.swift */; };
 		4763ADB52812ED58006D20C8 /* ArtistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4763ADB42812ED58006D20C8 /* ArtistViewController.swift */; };
 		4763ADB72812ED63006D20C8 /* ArtistViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4763ADB62812ED62006D20C8 /* ArtistViewController.xib */; };
 		4763ADB92812ED70006D20C8 /* ArtistViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4763ADB82812ED70006D20C8 /* ArtistViewModel.swift */; };
-		4763ADBB2812FAEC006D20C8 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4763ADBA2812FAEB006D20C8 /* Router.swift */; };
-		4763ADBD2812FB31006D20C8 /* Presentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4763ADBC2812FB31006D20C8 /* Presentable.swift */; };
 		479F287D281301D9009DCE91 /* AlbumCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479F287C281301D9009DCE91 /* AlbumCell.swift */; };
 		479F287F281301E4009DCE91 /* AlbumCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 479F287E281301E4009DCE91 /* AlbumCell.xib */; };
 		479F288128130CE2009DCE91 /* AlbumViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 479F288028130CE2009DCE91 /* AlbumViewController.xib */; };
@@ -47,6 +43,9 @@
 		479F288A28130F55009DCE91 /* TrackCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 479F288928130F54009DCE91 /* TrackCell.xib */; };
 		479F288C281315AF009DCE91 /* Integer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479F288B281315AF009DCE91 /* Integer.swift */; };
 		479F288E281317B1009DCE91 /* ScretchyTableViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479F288D281317B1009DCE91 /* ScretchyTableViewHeader.swift */; };
+		479F289228142C4E009DCE91 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479F289128142C4E009DCE91 /* AppCoordinator.swift */; };
+		479F289428142D8D009DCE91 /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479F289328142D8C009DCE91 /* BaseCoordinator.swift */; };
+		479F2896281430F1009DCE91 /* AlbumCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479F2895281430F1009DCE91 /* AlbumCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,17 +90,13 @@
 		471EF6E628119FD300A21056 /* HomeCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCoordinator.swift; sourceTree = "<group>"; };
 		471EF6E828119FDD00A21056 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		471EF6EB2811A3AF00A21056 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
-		471EF6ED2811A3CB00A21056 /* BaseCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
 		471EF6EF2811A52000A21056 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
-		471EF6F12811B3D800A21056 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		4763ADAE2811FD83006D20C8 /* ArtistCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistCell.swift; sourceTree = "<group>"; };
 		4763ADB02811FDAF006D20C8 /* ArtistCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArtistCell.xib; sourceTree = "<group>"; };
 		4763ADB22812ED4B006D20C8 /* ArtistCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistCoordinator.swift; sourceTree = "<group>"; };
 		4763ADB42812ED58006D20C8 /* ArtistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistViewController.swift; sourceTree = "<group>"; };
 		4763ADB62812ED62006D20C8 /* ArtistViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArtistViewController.xib; sourceTree = "<group>"; };
 		4763ADB82812ED70006D20C8 /* ArtistViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistViewModel.swift; sourceTree = "<group>"; };
-		4763ADBA2812FAEB006D20C8 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
-		4763ADBC2812FB31006D20C8 /* Presentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presentable.swift; sourceTree = "<group>"; };
 		479F287C281301D9009DCE91 /* AlbumCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCell.swift; sourceTree = "<group>"; };
 		479F287E281301E4009DCE91 /* AlbumCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlbumCell.xib; sourceTree = "<group>"; };
 		479F288028130CE2009DCE91 /* AlbumViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlbumViewController.xib; sourceTree = "<group>"; };
@@ -111,6 +106,9 @@
 		479F288928130F54009DCE91 /* TrackCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TrackCell.xib; sourceTree = "<group>"; };
 		479F288B281315AF009DCE91 /* Integer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Integer.swift; sourceTree = "<group>"; };
 		479F288D281317B1009DCE91 /* ScretchyTableViewHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScretchyTableViewHeader.swift; sourceTree = "<group>"; };
+		479F289128142C4E009DCE91 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		479F289328142D8C009DCE91 /* BaseCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
+		479F2895281430F1009DCE91 /* AlbumCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -206,9 +204,9 @@
 			isa = PBXGroup;
 			children = (
 				4763ADAD2811FD62006D20C8 /* Views */,
+				471EF6E628119FD300A21056 /* HomeCoordinator.swift */,
 				471EF6C6281094C200A21056 /* HomeViewController.swift */,
 				471EF6C82810950100A21056 /* HomeViewController.xib */,
-				471EF6E628119FD300A21056 /* HomeCoordinator.swift */,
 				471EF6E828119FDD00A21056 /* HomeViewModel.swift */,
 			);
 			path = Home;
@@ -239,8 +237,9 @@
 			isa = PBXGroup;
 			children = (
 				479F288628130F2A009DCE91 /* View */,
-				479F288028130CE2009DCE91 /* AlbumViewController.xib */,
+				479F2895281430F1009DCE91 /* AlbumCoordinator.swift */,
 				479F288228130CEF009DCE91 /* AlbumViewController.swift */,
+				479F288028130CE2009DCE91 /* AlbumViewController.xib */,
 				479F288428130CF9009DCE91 /* AlbumViewModel.swift */,
 			);
 			path = Album;
@@ -296,10 +295,8 @@
 			isa = PBXGroup;
 			children = (
 				471EF6EB2811A3AF00A21056 /* Coordinator.swift */,
-				471EF6ED2811A3CB00A21056 /* BaseCoordinator.swift */,
-				471EF6F12811B3D800A21056 /* AppCoordinator.swift */,
-				4763ADBA2812FAEB006D20C8 /* Router.swift */,
-				4763ADBC2812FB31006D20C8 /* Presentable.swift */,
+				479F289328142D8C009DCE91 /* BaseCoordinator.swift */,
+				479F289128142C4E009DCE91 /* AppCoordinator.swift */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -468,17 +465,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4763ADBB2812FAEC006D20C8 /* Router.swift in Sources */,
+				479F2896281430F1009DCE91 /* AlbumCoordinator.swift in Sources */,
 				471EF695281091B100A21056 /* AppDelegate.swift in Sources */,
 				471EF6D02810AE2A00A21056 /* API.swift in Sources */,
 				4763ADAF2811FD83006D20C8 /* ArtistCell.swift in Sources */,
-				471EF6F22811B3D800A21056 /* AppCoordinator.swift in Sources */,
 				471EF6E3281190E400A21056 /* ErrorHelper.swift in Sources */,
 				479F288328130CEF009DCE91 /* AlbumViewController.swift in Sources */,
 				4763ADB32812ED4C006D20C8 /* ArtistCoordinator.swift in Sources */,
+				479F289228142C4E009DCE91 /* AppCoordinator.swift in Sources */,
 				479F288528130CFA009DCE91 /* AlbumViewModel.swift in Sources */,
 				479F288E281317B1009DCE91 /* ScretchyTableViewHeader.swift in Sources */,
-				4763ADBD2812FB31006D20C8 /* Presentable.swift in Sources */,
 				471EF6D22810AEA000A21056 /* Artist.swift in Sources */,
 				479F288828130F4E009DCE91 /* TrackCell.swift in Sources */,
 				471EF6E528119F4400A21056 /* Bindable.swift in Sources */,
@@ -489,7 +485,7 @@
 				471EF6D92810B28300A21056 /* UIView.swift in Sources */,
 				479F288C281315AF009DCE91 /* Integer.swift in Sources */,
 				471EF6E928119FDD00A21056 /* HomeViewModel.swift in Sources */,
-				471EF6EE2811A3CB00A21056 /* BaseCoordinator.swift in Sources */,
+				479F289428142D8D009DCE91 /* BaseCoordinator.swift in Sources */,
 				471EF6DC2810B2F800A21056 /* LoadableImageView.swift in Sources */,
 				471EF6C7281094C300A21056 /* HomeViewController.swift in Sources */,
 				471EF6D42810AEA700A21056 /* Album.swift in Sources */,

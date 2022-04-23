@@ -2,22 +2,28 @@
 //  AppCoordinator.swift
 //  Deezer
 //
-//  Created by Andrii Momot on 21.04.2022.
+//  Created by Andrii Momot on 23.04.2022.
 //
 
-import Foundation
 import UIKit
 
-public class AppCoordinator: BaseCoordinator {
-    
-//    public func start<T: BaseCoordinator>(_ coordinator: T.Type) -> UINavigationController {
-//        let coordinator = create(coordinator.self)
-//        coordinator.start()
-//        
-//        let nav = UINavigationController()
-//        guard let vc = coordinator.viewController else { return nav }
-//        nav.setViewControllers([vc], animated: true)
-//
-//        return nav
-//    }
+final class AppCoordinator: Coordinator {
+  let api: API
+  let window: UIWindow
+  let rootViewController: UINavigationController
+  let homeCoordinator: HomeCoordinator
+  
+  init(window: UIWindow) {
+    self.window = window
+    api = API()
+    rootViewController = UINavigationController()
+      
+    homeCoordinator = HomeCoordinator(presenter: rootViewController, api: api)
+  }
+  
+  func start() {
+    window.rootViewController = rootViewController
+    homeCoordinator.start()
+    window.makeKeyAndVisible()
+  }
 }

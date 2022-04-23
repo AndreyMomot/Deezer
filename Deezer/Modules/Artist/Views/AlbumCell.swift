@@ -13,10 +13,6 @@ final class AlbumCell: UICollectionViewCell {
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var subtitleLabel: UILabel!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-    
     func configure(with album: Album?) {
         titleLabel.text = album?.title ?? "Unknown"
         subtitleLabel.text = album?.artist?.name ?? "Unknown"

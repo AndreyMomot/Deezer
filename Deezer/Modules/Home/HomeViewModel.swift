@@ -17,14 +17,14 @@ protocol HomeViewModelProtocol {
     var selectedArtist: Artist? { get set }
 }
 
-class HomeViewModel: HomeViewModelProtocol {
-    let api: APIProtocol
+final class HomeViewModel: HomeViewModelProtocol {
+    private let api: APIProtocol
     var artists = Bindable<[Artist]>()
     var albums = Bindable<[Album]>()
     var error = Bindable<Error>()
     var selectedArtist: Artist?
     
-    init(_ api: APIProtocol) {
+    init(with api: APIProtocol) {
         self.api = api
     }
     

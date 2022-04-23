@@ -15,13 +15,13 @@ protocol ArtistViewModelProtocol {
 }
 
 final class ArtistViewModel: ArtistViewModelProtocol {
-    let api: APIProtocol
+    private let api: APIProtocol
     let albums = Bindable<[Album]>()
     let artist: Artist?
     var selectedAlbum = Bindable<Album>()
     var error = Bindable<Error>()
     
-    init(_ api: APIProtocol, artist: Artist?, albums: [Album]) {
+    init(with api: APIProtocol, artist: Artist?, albums: [Album]?) {
         self.api = api
         self.artist = artist
         self.albums.value = albums

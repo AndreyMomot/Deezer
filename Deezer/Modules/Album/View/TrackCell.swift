@@ -14,19 +14,17 @@ final class TrackCell: UITableViewCell {
     @IBOutlet private weak var subtitleLabel: UILabel!
     @IBOutlet private weak var durationLabel: UILabel!
     
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-    
     func configure(with track: Track?) {
-        guard let index = track?.index else { return }
-        numberLabel.text = "\(index)."
         titleLabel.text = track?.title
         subtitleLabel.text = track?.artist?.name
         
-        guard let interval = track?.duration else { return }
-        durationLabel.text = interval.convertToTime()
+        if let index = track?.index {
+            numberLabel.text = "\(index)."
+        }
+        
+        if let interval = track?.duration {
+            durationLabel.text = interval.convertToTime()
+        }
     }
 }
 

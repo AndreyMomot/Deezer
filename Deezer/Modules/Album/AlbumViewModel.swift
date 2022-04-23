@@ -14,7 +14,7 @@ protocol AlbumViewModelProtocol {
 final class AlbumViewModel: AlbumViewModelProtocol {
     let album: Album
     
-    init(_ album: Album) {
+    init(with album: Album) {
         self.album = album
     }
 }

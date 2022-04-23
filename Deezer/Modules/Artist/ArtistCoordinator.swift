@@ -8,13 +8,40 @@
 import UIKit
 
 final class ArtistCoordinator: BaseCoordinator {
+    private let presenter: UINavigationController
+    private let api: API
+    private let artist: Artist?
+    private let albums: [Album]?
+    private var artistViewController: ArtistViewController?
+    private var albumCoordinator: AlbumCoordinator?
     
-    var albums: [Album]?
-
+    init(presenter: UINavigationController, api: API, artist: Artist?, albums: [Album]?) {
+        self.presenter = presenter
+        self.api = api
+        self.artist = artist
+        self.albums = albums
+    }
+    
     override func start() {
-        guard let albums = albums else { return }
-        let viewModel = ArtistViewModel(api, artist: nil, albums: albums)
-        let vc = instantiate(ArtistViewController.self)
-        vc.viewModel = viewModel
+        let viewModel = ArtistViewModel(with: api, artist: artist, albums: albums)
+        let artistViewController = instantiate(ArtistViewController.self)
+        artistViewController.viewModel = viewModel
+        
+        artistViewController.onShowAlbum = {[weak self] album in
+            self?.showAlbumDetails(with: album)
+        }
+        presenter.pushViewController(artistViewController, animated: true)
+        
+        self.artistViewController = artistViewController
+    }
+}
+
+extension ArtistCoordinator {
+    
+    func showAlbumDetails(with album: Album) {
+        let albumCoordinator = AlbumCoordinator(presenter: presenter, api: api, album: album)
+        albumCoordinator.start()
+        
+        self.albumCoordinator = albumCoordinator
     }
 }

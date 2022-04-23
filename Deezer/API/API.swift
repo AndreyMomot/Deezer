@@ -14,7 +14,6 @@ protocol APIProtocol {
 }
 
 final class API: APIProtocol {
-
     private let baseURL = "https://api.deezer.com/"
     private let searchArtist = "search/artist?q="
     private let artist = "artist"
@@ -62,7 +61,6 @@ final class API: APIProtocol {
     }
     
     private func performRequest<T: Decodable>(_ request: URLRequest, decode decodable: T.Type, result: @escaping (Result<T, Error>) -> Void) {
-
         URLSession.shared.dataTask(with: request) { (data, response, error) in
             guard let data = data else { return }
             do {

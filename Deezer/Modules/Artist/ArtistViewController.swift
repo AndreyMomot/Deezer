@@ -10,7 +10,7 @@ import UIKit
 final class ArtistViewController: BaseViewController {
 
     var viewModel: ArtistViewModel?
-    var obShowAlbum: ((Int) -> Void)?
+    var onShowAlbum: ((Album) -> Void)?
 
     @IBOutlet private weak var collectionView: UICollectionView!
     
@@ -32,7 +32,7 @@ final class ArtistViewController: BaseViewController {
     
     private func binding() {
         viewModel?.albums.bind {[weak self] albums  in
-            DispatchQueue.main.async {[weak self] in
+            DispatchQueue.main.async {
                 self?.collectionView.reloadData()
             }
         }
@@ -40,16 +40,12 @@ final class ArtistViewController: BaseViewController {
         viewModel?.selectedAlbum.bind {[weak self] album  in
             DispatchQueue.main.async {
                 guard let album = album else { return }
-                let viewModel = AlbumViewModel(album)
-                let vca = AlbumViewController()
-                vca.viewModel = viewModel
-                self?.navigationController?.pushViewController(vca, animated: true)
-                #warning("ToDo: make clear navigation")
+                self?.onShowAlbum?(album)
             }
         }
         
         viewModel?.error.bind {[weak self] error in
-            DispatchQueue.main.async {[weak self] in
+            DispatchQueue.main.async {
                 self?.activity.stopAnimating()
                 self?.showAlert(withTitle: "Error", message: error?.localizedDescription)
             }

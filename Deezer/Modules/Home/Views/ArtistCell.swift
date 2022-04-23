@@ -7,14 +7,10 @@
 
 import UIKit
 
-class ArtistCell: UITableViewCell {
+final class ArtistCell: UITableViewCell {
     
     @IBOutlet private weak var artistImageView: LoadableImageView!
     @IBOutlet private weak var nameLabel: UILabel!
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
     
     func configure(with artist: Artist?) {
         nameLabel.text = artist?.name
