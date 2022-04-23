@@ -49,6 +49,11 @@
 		479F289C28144086009DCE91 /* AppColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479F289B28144086009DCE91 /* AppColor.swift */; };
 		479F289E2814413C009DCE91 /* ArtistHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479F289D2814413C009DCE91 /* ArtistHeaderView.swift */; };
 		479F28A028144799009DCE91 /* SearchFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479F289F28144799009DCE91 /* SearchFooter.swift */; };
+		479F28AB28146BCE009DCE91 /* APITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479F28A928146BCE009DCE91 /* APITests.swift */; };
+		479F28AC28146BCE009DCE91 /* HelpersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479F28AA28146BCE009DCE91 /* HelpersTests.swift */; };
+		479F28AE28147021009DCE91 /* artbat.json in Resources */ = {isa = PBXBuildFile; fileRef = 479F28AD28147021009DCE91 /* artbat.json */; };
+		479F28B228147329009DCE91 /* albums.json in Resources */ = {isa = PBXBuildFile; fileRef = 479F28B128147329009DCE91 /* albums.json */; };
+		479F28B428147467009DCE91 /* search.json in Resources */ = {isa = PBXBuildFile; fileRef = 479F28B328147467009DCE91 /* search.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -115,6 +120,11 @@
 		479F289B28144086009DCE91 /* AppColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppColor.swift; sourceTree = "<group>"; };
 		479F289D2814413C009DCE91 /* ArtistHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistHeaderView.swift; sourceTree = "<group>"; };
 		479F289F28144799009DCE91 /* SearchFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFooter.swift; sourceTree = "<group>"; };
+		479F28A928146BCE009DCE91 /* APITests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APITests.swift; sourceTree = "<group>"; };
+		479F28AA28146BCE009DCE91 /* HelpersTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HelpersTests.swift; sourceTree = "<group>"; };
+		479F28AD28147021009DCE91 /* artbat.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = artbat.json; sourceTree = "<group>"; };
+		479F28B128147329009DCE91 /* albums.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = albums.json; sourceTree = "<group>"; };
+		479F28B328147467009DCE91 /* search.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = search.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +192,8 @@
 		471EF6AA281091B400A21056 /* DeezerTests */ = {
 			isa = PBXGroup;
 			children = (
+				479F28B0281472DA009DCE91 /* HelpersTests */,
+				479F28AF28147285009DCE91 /* APITests */,
 				471EF6AB281091B400A21056 /* DeezerTests.swift */,
 			);
 			path = DeezerTests;
@@ -338,6 +350,25 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		479F28AF28147285009DCE91 /* APITests */ = {
+			isa = PBXGroup;
+			children = (
+				479F28B128147329009DCE91 /* albums.json */,
+				479F28AD28147021009DCE91 /* artbat.json */,
+				479F28B328147467009DCE91 /* search.json */,
+				479F28A928146BCE009DCE91 /* APITests.swift */,
+			);
+			path = APITests;
+			sourceTree = "<group>";
+		};
+		479F28B0281472DA009DCE91 /* HelpersTests */ = {
+			isa = PBXGroup;
+			children = (
+				479F28AA28146BCE009DCE91 /* HelpersTests.swift */,
+			);
+			path = HelpersTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -457,6 +488,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				479F28B428147467009DCE91 /* search.json in Resources */,
+				479F28AE28147021009DCE91 /* artbat.json in Resources */,
+				479F28B228147329009DCE91 /* albums.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -512,6 +546,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				479F28AB28146BCE009DCE91 /* APITests.swift in Sources */,
+				479F28AC28146BCE009DCE91 /* HelpersTests.swift in Sources */,
 				471EF6AC281091B400A21056 /* DeezerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

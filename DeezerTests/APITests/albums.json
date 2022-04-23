@@ -1,0 +1,129 @@
+{
+  "id": 81332322,
+  "title": "Upperground - EP",
+  "upc": "4018939360603",
+  "link": "http:\/\/www.deezer.com\/album\/81332322",
+  "share": "https:\/\/www.deezer.com\/album\/81332322?utm_source=deezer&utm_content=album-81332322&utm_term=0_1650735817&utm_medium=web",
+  "cover": "http:\/\/api.deezer.com\/album\/81332322\/image",
+  "cover_small": "http:\/\/e-cdn-images.dzcdn.net\/images\/cover\/577f161df5a85d03f50ed86811a0eea2\/56x56-000000-80-0-0.jpg",
+  "cover_medium": "http:\/\/e-cdn-images.dzcdn.net\/images\/cover\/577f161df5a85d03f50ed86811a0eea2\/250x250-000000-80-0-0.jpg",
+  "cover_big": "http:\/\/e-cdn-images.dzcdn.net\/images\/cover\/577f161df5a85d03f50ed86811a0eea2\/500x500-000000-80-0-0.jpg",
+  "cover_xl": "http:\/\/e-cdn-images.dzcdn.net\/images\/cover\/577f161df5a85d03f50ed86811a0eea2\/1000x1000-000000-80-0-0.jpg",
+  "md5_image": "577f161df5a85d03f50ed86811a0eea2",
+  "genre_id": -1,
+  "genres": {
+    "data": [
+      
+    ]
+  },
+  "label": "Diynamic Music",
+  "nb_tracks": 3,
+  "duration": 1362,
+  "fans": 388,
+  "release_date": "2019-01-04",
+  "record_type": "album",
+  "available": true,
+  "tracklist": "http:\/\/api.deezer.com\/album\/81332322\/tracks",
+  "explicit_lyrics": false,
+  "explicit_content_lyrics": 0,
+  "explicit_content_cover": 2,
+  "contributors": [
+    {
+      "id": 8911470,
+      "name": "Artbat",
+      "link": "http:\/\/www.deezer.com\/artist\/8911470",
+      "share": "https:\/\/www.deezer.com\/artist\/8911470?utm_source=deezer&utm_content=artist-8911470&utm_term=0_1650735817&utm_medium=web",
+      "picture": "http:\/\/api.deezer.com\/artist\/8911470\/image",
+      "picture_small": "http:\/\/e-cdn-images.dzcdn.net\/images\/artist\/86ba3e71a1a806601760db8d502ab60b\/56x56-000000-80-0-0.jpg",
+      "picture_medium": "http:\/\/e-cdn-images.dzcdn.net\/images\/artist\/86ba3e71a1a806601760db8d502ab60b\/250x250-000000-80-0-0.jpg",
+      "picture_big": "http:\/\/e-cdn-images.dzcdn.net\/images\/artist\/86ba3e71a1a806601760db8d502ab60b\/500x500-000000-80-0-0.jpg",
+      "picture_xl": "http:\/\/e-cdn-images.dzcdn.net\/images\/artist\/86ba3e71a1a806601760db8d502ab60b\/1000x1000-000000-80-0-0.jpg",
+      "radio": true,
+      "tracklist": "http:\/\/api.deezer.com\/artist\/8911470\/top?limit=50",
+      "type": "artist",
+      "role": "Main"
+    }
+  ],
+  "artist": {
+    "id": 8911470,
+    "name": "Artbat",
+    "picture": "http:\/\/api.deezer.com\/artist\/8911470\/image",
+    "picture_small": "http:\/\/e-cdn-images.dzcdn.net\/images\/artist\/86ba3e71a1a806601760db8d502ab60b\/56x56-000000-80-0-0.jpg",
+    "picture_medium": "http:\/\/e-cdn-images.dzcdn.net\/images\/artist\/86ba3e71a1a806601760db8d502ab60b\/250x250-000000-80-0-0.jpg",
+    "picture_big": "http:\/\/e-cdn-images.dzcdn.net\/images\/artist\/86ba3e71a1a806601760db8d502ab60b\/500x500-000000-80-0-0.jpg",
+    "picture_xl": "http:\/\/e-cdn-images.dzcdn.net\/images\/artist\/86ba3e71a1a806601760db8d502ab60b\/1000x1000-000000-80-0-0.jpg",
+    "tracklist": "http:\/\/api.deezer.com\/artist\/8911470\/top?limit=50",
+    "type": "artist"
+  },
+  "type": "album",
+  "tracks": {
+    "data": [
+      {
+        "id": 601810442,
+        "readable": true,
+        "title": "Upperground",
+        "title_short": "Upperground",
+        "title_version": "",
+        "link": "http:\/\/www.deezer.com\/track\/601810442",
+        "duration": 405,
+        "rank": 354443,
+        "explicit_lyrics": false,
+        "explicit_content_lyrics": 0,
+        "explicit_content_cover": 2,
+        "preview": "http:\/\/cdn-preview-c.deezer.com\/stream\/c-ceaa4e8d79bd9c7014ca32e6fe9b87c2-5.mp3",
+        "md5_image": "577f161df5a85d03f50ed86811a0eea2",
+        "artist": {
+          "id": 8911470,
+          "name": "Artbat",
+          "tracklist": "http:\/\/api.deezer.com\/artist\/8911470\/top?limit=50",
+          "type": "artist"
+        },
+        "type": "track"
+      },
+      {
+        "id": 601810452,
+        "readable": true,
+        "title": "Atlas",
+        "title_short": "Atlas",
+        "title_version": "",
+        "link": "http:\/\/www.deezer.com\/track\/601810452",
+        "duration": 454,
+        "rank": 386663,
+        "explicit_lyrics": false,
+        "explicit_content_lyrics": 0,
+        "explicit_content_cover": 2,
+        "preview": "http:\/\/cdn-preview-a.deezer.com\/stream\/c-a788b2499a60d63e8cee1219bf538177-5.mp3",
+        "md5_image": "577f161df5a85d03f50ed86811a0eea2",
+        "artist": {
+          "id": 8911470,
+          "name": "Artbat",
+          "tracklist": "http:\/\/api.deezer.com\/artist\/8911470\/top?limit=50",
+          "type": "artist"
+        },
+        "type": "track"
+      },
+      {
+        "id": 601810462,
+        "readable": true,
+        "title": "Don't Bring Me Down",
+        "title_short": "Don't Bring Me Down",
+        "title_version": "",
+        "link": "http:\/\/www.deezer.com\/track\/601810462",
+        "duration": 503,
+        "rank": 171600,
+        "explicit_lyrics": false,
+        "explicit_content_lyrics": 0,
+        "explicit_content_cover": 2,
+        "preview": "http:\/\/cdn-preview-4.deezer.com\/stream\/c-49895e50b52d79b6dbeb6e9fd04bfa71-4.mp3",
+        "md5_image": "577f161df5a85d03f50ed86811a0eea2",
+        "artist": {
+          "id": 8911470,
+          "name": "Artbat",
+          "tracklist": "http:\/\/api.deezer.com\/artist\/8911470\/top?limit=50",
+          "type": "artist"
+        },
+        "type": "track"
+      }
+    ]
+  }
+}
