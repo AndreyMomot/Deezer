@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ArtistHeaderView: UIView {
+final class ArtistHeaderView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)

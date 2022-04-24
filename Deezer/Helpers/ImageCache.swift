@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ImageCache {
+final class ImageCache {
     private let cache = NSCache<NSString, UIImage>()
     private var observer: NSObjectProtocol?
     

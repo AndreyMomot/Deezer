@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LoadableImageView: UIImageView {
+final class LoadableImageView: UIImageView {
     
     private var currentTask: URLSessionTask?
     private lazy var activity: UIActivityIndicatorView = {

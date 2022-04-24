@@ -9,9 +9,9 @@ import UIKit
 
 final class AppCoordinator: Coordinator {
   let api: API
-  let window: UIWindow
-  let rootViewController: UINavigationController
-  let homeCoordinator: HomeCoordinator
+  private let window: UIWindow
+  private let rootViewController: UINavigationController
+  private let homeCoordinator: HomeCoordinator
   
   init(window: UIWindow) {
     self.window = window
