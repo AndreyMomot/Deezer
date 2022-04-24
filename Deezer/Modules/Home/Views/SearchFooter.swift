@@ -8,7 +8,7 @@
 import UIKit
 
 final class SearchFooter: UIView {
-    let label = UILabel()
+    private let label = UILabel()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -36,19 +36,19 @@ final class SearchFooter: UIView {
         }
     }
         
-    func hideFooter() {
+    private func hideFooter() {
         UIView.animate(withDuration: 0.7) {
             self.alpha = 0.0
         }
     }
     
-    func showFooter() {
+    private func showFooter() {
         UIView.animate(withDuration: 0.7) {
             self.alpha = 1.0
         }
     }
     
-    func configureView() {
+    private func configureView() {
         backgroundColor = AppColor.background
         alpha = 0.0
         
