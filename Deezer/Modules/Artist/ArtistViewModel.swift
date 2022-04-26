@@ -15,20 +15,21 @@ protocol ArtistViewModelProtocol {
 }
 
 final class ArtistViewModel: ArtistViewModelProtocol {
-    private let api: APIProtocol
+    private let api: API
     let albums = Bindable<[Album]>()
     let artist: Artist?
     var selectedAlbum = Bindable<Album>()
     var error = Bindable<Error>()
     
-    init(with api: APIProtocol, artist: Artist?, albums: [Album]?) {
+    init(with api: API, artist: Artist?, albums: [Album]?) {
         self.api = api
         self.artist = artist
         self.albums.value = albums
     }
     
     func getAlbumInfo(for albumID: Int) {
-        api.getAlbumInfo(albumID) {[weak self] result in
+        let request = AlbumInfoRequest(albumID: albumID)
+        api.send(request) {[weak self] result in
             switch result {
             case .success(let album):
                 self?.selectedAlbum.value = album

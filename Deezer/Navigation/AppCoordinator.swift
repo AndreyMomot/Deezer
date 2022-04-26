@@ -15,7 +15,7 @@ final class AppCoordinator: Coordinator {
   
   init(window: UIWindow) {
     self.window = window
-    api = API()
+    api = AppAPI()
     rootViewController = UINavigationController()
       
     homeCoordinator = HomeCoordinator(presenter: rootViewController, api: api)

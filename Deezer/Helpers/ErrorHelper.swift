@@ -12,7 +12,7 @@ enum AppError: String, Error {
 }
 
 extension AppError: LocalizedError {
-  var errorDescription: String? {
-    return rawValue
-  }
+    var errorDescription: String? {
+        return rawValue
+    }
 }
