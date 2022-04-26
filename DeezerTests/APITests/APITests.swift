@@ -9,15 +9,16 @@ import XCTest
 @testable import Deezer
 
 class APITests: XCTestCase {
-    let api: APIProtocol = API()
+    let api: API = AppAPI()
     
     func testSearchResponse() {
         let expectation = self.expectation(description: "expectation")
 
-        api.search(for: "artbat") { result in
+        let request = SearchRequest(artist: "artbat")
+        api.send(request) { result in
             switch result {
-            case .success(let artists):
-                XCTAssertEqual(artists.count, 25)
+            case .success(let response):
+                XCTAssertEqual(response.data.count, 25)
                 expectation.fulfill()
             case .failure(let error):
                 XCTFail(error.localizedDescription)
@@ -30,10 +31,11 @@ class APITests: XCTestCase {
     func testAlbumsResponse() {
         let expectation = self.expectation(description: "expectation")
 
-        api.getAlbums(for: 8911470) { result in
+        let request = AlbumsRequest(artistID: 8911470)
+        api.send(request) { result in
             switch result {
-            case .success(let albums):
-                XCTAssertEqual(albums.count, 24)
+            case .success(let response):
+                XCTAssertEqual(response.data.count, 24)
                 expectation.fulfill()
             case .failure(let error):
                 XCTFail(error.localizedDescription)
@@ -46,7 +48,8 @@ class APITests: XCTestCase {
     func testAlbumResponse() {
         let expectation = self.expectation(description: "expectation")
 
-        api.getAlbumInfo(81332322) { result in
+        let request = AlbumInfoRequest(albumID: 81332322)
+        api.send(request) { result in
             switch result {
             case .success(let album):
                 XCTAssertEqual(album.tracks?.data.count, 3)

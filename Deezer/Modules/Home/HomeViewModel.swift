@@ -19,23 +19,24 @@ protocol HomeViewModelProtocol {
 }
 
 final class HomeViewModel: HomeViewModelProtocol {
-    private let api: APIProtocol
+    private let api: API
     var artists = Bindable<[Artist]>()
     var albums = Bindable<[Album]>()
     var error = Bindable<Error>()
     var selectedArtist: Artist?
     var previousSearch: String?
     
-    init(with api: APIProtocol) {
+    init(with api: API) {
         self.api = api
     }
     
     func search(for artist: String) {
         previousSearch = artist
-        api.search(for: artist) {[weak self] result  in
+        let request = SearchRequest(artist: artist)
+        api.send(request) {[weak self] result  in
             switch result {
-            case .success(let artists):
-                self?.artists.value = artists
+            case .success(let response):
+                self?.artists.value = response.data
             case .failure(let error):
                 self?.error.value = error
             }
@@ -43,10 +44,11 @@ final class HomeViewModel: HomeViewModelProtocol {
     }
     
     func getAlbums(for artistID: Int) {
-        api.getAlbums(for: artistID) {[weak self] result in
+        let request = AlbumsRequest(artistID: artistID)
+        api.send(request) {[weak self] result in
             switch result {
-            case .success(let albums):
-                self?.albums.value = albums
+            case .success(let response):
+                self?.albums.value = response.data
             case .failure(let error):
                 self?.error.value = error
             }

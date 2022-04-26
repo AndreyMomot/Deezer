@@ -11,7 +11,8 @@ final class ArtistViewController: BaseViewController {
 
     var viewModel: ArtistViewModel?
     var onShowAlbum: ((Album) -> Void)?
-
+    private let numberOfColunmns: CGFloat = 2
+    
     @IBOutlet private weak var collectionView: UICollectionView!
     
     override func viewDidLoad() {
@@ -53,6 +54,7 @@ final class ArtistViewController: BaseViewController {
     }
 }
 
+// MARK: - UICollectionViewDelegate
 extension ArtistViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         guard let count = viewModel?.albums.value?.count, count > indexPath.row else { return }
@@ -63,12 +65,7 @@ extension ArtistViewController: UICollectionViewDelegate {
     
 }
 
-extension ArtistViewController: UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: collectionView.frame.width / 2.1, height: 250)
-    }
-}
-
+// MARK: - UICollectionViewDataSource
 extension ArtistViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return viewModel?.albums.value?.count ?? 0
@@ -84,5 +81,23 @@ extension ArtistViewController: UICollectionViewDataSource {
         }
         cell.configure(with: album)
         return cell
+    }
+}
+
+// MARK: - UICollectionViewDelegateFlowLayout to render desired numberOfColunmns
+extension ArtistViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+
+      guard let flowLayout = collectionViewLayout as? UICollectionViewFlowLayout else {
+           return CGSize()
+       }
+
+       // subtract section left/ right insets mentioned in xib view
+       let widthAvailbleForAllItems =  (collectionView.frame.width - flowLayout.sectionInset.left - flowLayout.sectionInset.right)
+
+       // Calculating widthForOneItem for desired numberOfColunmns by sunbtracting item spacing if any
+       let widthForOneItem = widthAvailbleForAllItems / numberOfColunmns - flowLayout.minimumInteritemSpacing
+
+       return CGSize(width: CGFloat(widthForOneItem), height: (flowLayout.itemSize.height))
     }
 }

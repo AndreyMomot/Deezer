@@ -21,7 +21,7 @@ class DeezerTests: XCTestCase {
             let artist = Artist(id: 1, name: "Artbat", picture: nil)
             
             let nav = UINavigationController()
-            let api = API()
+            let api = AppAPI()
             let coordinator = ArtistCoordinator(presenter: nav, api: api, artist: artist, albums: albums)
             coordinator.start()
             
@@ -41,7 +41,7 @@ class DeezerTests: XCTestCase {
             let jsonData = try decoder.decode(AlbumsResponse.self, from: data)
             let albums = jsonData.data
             let artist = Artist(id: 1, name: "Artbat", picture: nil)
-            let api = API()
+            let api = AppAPI()
             
             let viewModel = ArtistViewModel(with: api, artist: artist, albums: albums)
             let artistViewController = ArtistViewController.loadFromNib()
