@@ -13,6 +13,7 @@ final class ImageCache {
     
     static let shared = ImageCache()
     
+    // Remove all cached objects if receive mamory warning
     private init() {
         observer = NotificationCenter.default.addObserver(
             forName: UIApplication.didReceiveMemoryWarningNotification,

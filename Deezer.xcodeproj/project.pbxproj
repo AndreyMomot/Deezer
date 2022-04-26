@@ -278,8 +278,8 @@
 		471EF6CD2810AC1D00A21056 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				471EF6D12810AEA000A21056 /* Artist.swift */,
 				471EF6D32810AEA700A21056 /* Album.swift */,
+				471EF6D12810AEA000A21056 /* Artist.swift */,
 				471EF6D52810B14700A21056 /* Track.swift */,
 			);
 			path = Models;
@@ -290,8 +290,8 @@
 			children = (
 				479F28B72817F668009DCE91 /* Requests */,
 				471EF6CF2810AE2A00A21056 /* API.swift */,
-				479F28BA2817FA23009DCE91 /* AppAPI.swift */,
 				479F28B52817F5CA009DCE91 /* APIRequest.swift */,
+				479F28BA2817FA23009DCE91 /* AppAPI.swift */,
 			);
 			path = API;
 			sourceTree = "<group>";
@@ -299,9 +299,9 @@
 		471EF6D72810B27600A21056 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				471EF6D82810B28300A21056 /* UIView.swift */,
 				471EF6EF2811A52000A21056 /* BaseViewController.swift */,
 				479F288B281315AF009DCE91 /* Integer.swift */,
+				471EF6D82810B28300A21056 /* UIView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -317,10 +317,10 @@
 		471EF6DD2810B39100A21056 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				471EF6DE2810B39F00A21056 /* ImageCache.swift */,
-				471EF6E2281190E400A21056 /* ErrorHelper.swift */,
-				471EF6E428119F4300A21056 /* Bindable.swift */,
 				479F289B28144086009DCE91 /* AppColor.swift */,
+				471EF6E428119F4300A21056 /* Bindable.swift */,
+				471EF6E2281190E400A21056 /* ErrorHelper.swift */,
+				471EF6DE2810B39F00A21056 /* ImageCache.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -328,9 +328,9 @@
 		471EF6EA2811A39E00A21056 /* Navigation */ = {
 			isa = PBXGroup;
 			children = (
-				471EF6EB2811A3AF00A21056 /* Coordinator.swift */,
-				479F289328142D8C009DCE91 /* BaseCoordinator.swift */,
 				479F289128142C4E009DCE91 /* AppCoordinator.swift */,
+				479F289328142D8C009DCE91 /* BaseCoordinator.swift */,
+				471EF6EB2811A3AF00A21056 /* Coordinator.swift */,
 			);
 			path = Navigation;
 			sourceTree = "<group>";
@@ -359,9 +359,9 @@
 		479F288628130F2A009DCE91 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				479F288D281317B1009DCE91 /* ScretchyTableViewHeader.swift */,
 				479F288728130F4D009DCE91 /* TrackCell.swift */,
 				479F288928130F54009DCE91 /* TrackCell.xib */,
-				479F288D281317B1009DCE91 /* ScretchyTableViewHeader.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -388,9 +388,9 @@
 		479F28B72817F668009DCE91 /* Requests */ = {
 			isa = PBXGroup;
 			children = (
-				479F28B82817F677009DCE91 /* SearchRequest.swift */,
-				479F28BC2817FDE9009DCE91 /* AlbumsRequest.swift */,
 				479F28BE2817FDF2009DCE91 /* AlbumInfoRequest.swift */,
+				479F28BC2817FDE9009DCE91 /* AlbumsRequest.swift */,
+				479F28B82817F677009DCE91 /* SearchRequest.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";

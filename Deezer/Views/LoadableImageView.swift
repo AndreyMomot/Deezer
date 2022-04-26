@@ -40,6 +40,7 @@ final class LoadableImageView: UIImageView {
         
         image = nil
                 
+        // Load already cached image if so
         if let cachedImage = ImageCache.shared.getImage(forKey: urlString) {
             image = cachedImage
             return
@@ -54,13 +55,14 @@ final class LoadableImageView: UIImageView {
                     self?.activity.stopAnimating()
                 }
 
-                if let unwrappedError = error {
-                    print(unwrappedError)
+                if let error = error {
+                    print(error)
                     return
                 }
                 
                 if let unwrappedData = data, let downloadedImage = UIImage(data: unwrappedData) {
                     DispatchQueue.main.async {
+                        // Cache just loaded image
                         ImageCache.shared.save(image: downloadedImage, forKey: urlString)
                         if self?.imageUrlString == urlString {
                             self?.image = downloadedImage

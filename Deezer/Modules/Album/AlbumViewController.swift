@@ -29,7 +29,7 @@ final class AlbumViewController: BaseViewController {
         tableView.separatorStyle = .none
     }
     
-    // MARK: - UITableView header imageView set up using UIScrollViewDelegate
+    // UITableView header imageView set up using UIScrollViewDelegate
     private func configureHeaderView() {
         let height = tableView.frame.height * 0.5
         let headerView = StretchyTableHeaderView(frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: height))
@@ -38,6 +38,7 @@ final class AlbumViewController: BaseViewController {
     }
 }
 
+// MARK: - UIScrollViewDelegate
 extension AlbumViewController: UITableViewDelegate, UIScrollViewDelegate {
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         let headerView = tableView.tableHeaderView as? StretchyTableHeaderView
@@ -45,8 +46,8 @@ extension AlbumViewController: UITableViewDelegate, UIScrollViewDelegate {
     }
 }
 
+// MARK: - UITableViewDataSource
 extension AlbumViewController: UITableViewDataSource {
-        
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel?.album.tracks?.data.count ?? 0
     }

@@ -10,10 +10,16 @@ import Foundation
 class AppAPI: API {
     
     func send<T>(_ request: T, completion: @escaping (Result<T.Response, Error>) -> Void) where T: APIRequest {
-        let path = "https://api.deezer.com/\(request.path)"
+        guard let path = "https://api.deezer.com/\(request.path)".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else { return }
         
-        guard let path = path.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed),
-              let url = URL(string: path) else {
+        var components = URLComponents(string: path)
+        if let parameters = request.parameters() as? [String: Any] {
+            components?.queryItems = parameters.map { key, value in
+                URLQueryItem(name: key, value: String(describing: value))
+            }
+        }
+        
+        guard let url = components?.url else {
                   let error = AppError.defaultError
                   completion(.failure(error))
                   return
