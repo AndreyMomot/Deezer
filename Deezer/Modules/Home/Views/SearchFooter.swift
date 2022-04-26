@@ -9,20 +9,16 @@ import UIKit
 
 final class SearchFooter: UIView {
     private let label = UILabel()
-    
-    override init(frame: CGRect) {
-        super.init(frame: frame)
         
-        configureView()
-    }
-    
-    required init?(coder: NSCoder) {
-        super.init(coder: coder)
+    override func awakeFromNib() {
+        super.awakeFromNib()
         
         configureView()
     }
     
     override func draw(_ rect: CGRect) {
+        super.draw(rect)
+        
         label.frame = bounds
     }
     

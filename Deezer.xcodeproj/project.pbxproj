@@ -59,6 +59,7 @@
 		479F28BB2817FA23009DCE91 /* AppAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479F28BA2817FA23009DCE91 /* AppAPI.swift */; };
 		479F28BD2817FDE9009DCE91 /* AlbumsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479F28BC2817FDE9009DCE91 /* AlbumsRequest.swift */; };
 		479F28BF2817FDF2009DCE91 /* AlbumInfoRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 479F28BE2817FDF2009DCE91 /* AlbumInfoRequest.swift */; };
+		479F28C1281827FC009DCE91 /* ArtistHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 479F28C0281827FC009DCE91 /* ArtistHeaderView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -135,6 +136,7 @@
 		479F28BA2817FA23009DCE91 /* AppAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppAPI.swift; sourceTree = "<group>"; };
 		479F28BC2817FDE9009DCE91 /* AlbumsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsRequest.swift; sourceTree = "<group>"; };
 		479F28BE2817FDF2009DCE91 /* AlbumInfoRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumInfoRequest.swift; sourceTree = "<group>"; };
+		479F28C0281827FC009DCE91 /* ArtistHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArtistHeaderView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -339,6 +341,7 @@
 				4763ADAE2811FD83006D20C8 /* ArtistCell.swift */,
 				4763ADB02811FDAF006D20C8 /* ArtistCell.xib */,
 				479F289D2814413C009DCE91 /* ArtistHeaderView.swift */,
+				479F28C0281827FC009DCE91 /* ArtistHeaderView.xib */,
 				479F289F28144799009DCE91 /* SearchFooter.swift */,
 			);
 			path = Views;
@@ -496,6 +499,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				479F28C1281827FC009DCE91 /* ArtistHeaderView.xib in Resources */,
 				471EF6A1281091B400A21056 /* LaunchScreen.storyboard in Resources */,
 				479F288128130CE2009DCE91 /* AlbumViewController.xib in Resources */,
 				479F287F281301E4009DCE91 /* AlbumCell.xib in Resources */,

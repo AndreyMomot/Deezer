@@ -131,12 +131,7 @@ extension HomeViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let headerView = ArtistHeaderView(frame: CGRect(x: 0, y: 0, width: tableView.frame.width, height: 50))
-        return headerView
-    }
-    
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 50
+        return ArtistHeaderView.loadFromXib()
     }
 }
 

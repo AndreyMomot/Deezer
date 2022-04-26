@@ -21,11 +21,13 @@ final class LoadableImageView: UIImageView {
     
     init() {
         super.init(image: nil, highlightedImage: nil)
+        
         activity.fill(in: self)
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
+        
         activity.fill(in: self)
     }
     
