@@ -129,7 +129,9 @@ extension HomeViewController: UITableViewDelegate {
         
         let artist = viewModel?.artists.value?[indexPath.row]
         viewModel?.selectedArtist = artist
-        viewModel?.getAlbums(for: artistID)
+        Task(priority: .medium) {
+            await viewModel?.getAlbums(for: artistID)
+         }
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
